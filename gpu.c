@@ -141,8 +141,14 @@ static int is_read_only_scalar(struct gpu_array_info *array,
 	isl_union_map *write;
 	int empty;
 
-	if (array->has_compound_element)
-		return 0;
+	if(prog->scop->options->struct_pass_by_value) {
+		if (array->has_compound_element && array->n_index != 0)
+			return 0;
+	}else{
+		if (array->has_compound_element)
+			return 0;
+	}
+
 	if (array->n_index != 0)
 		return 0;
 

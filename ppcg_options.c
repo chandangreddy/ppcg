@@ -58,6 +58,8 @@ ISL_ARG_BOOL(struct ppcg_options, use_shared_memory, 0, "shared-memory", 1,
 	"use shared memory in kernel code")
 ISL_ARG_BOOL(struct ppcg_options, use_private_memory, 0, "private-memory", 1,
 	"use private memory in kernel code")
+ISL_ARG_BOOL(struct ppcg_options, struct_pass_by_value, 0, "struct-pass-by-value", 0,
+	"treat structs as scalars and pass by value")
 ISL_ARG_STR(struct ppcg_options, ctx, 0, "ctx", "context", NULL,
     "Constraints on parameters")
 ISL_ARG_BOOL(struct ppcg_options, non_negative_parameters, 0,

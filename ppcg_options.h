@@ -44,6 +44,9 @@ struct ppcg_options {
 	/* Linearize all device arrays. */
 	int linearize_device_arrays;
 
+	/* treat structs as scalars and pass them by val. */
+	int struct_pass_by_value;
+
 	/* Allow live range to be reordered. */
 	int live_range_reordering;
 
